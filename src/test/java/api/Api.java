@@ -1,15 +1,10 @@
-package apirequests;
+package api;
 
-import com.google.gson.Gson;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
 
-import java.util.Map;
-
 import static io.restassured.RestAssured.given;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ApiRequests {
+public class Api {
     private static final String apiKey = "7f118fdc38e041d4023c64109fa94bef";
     private static final String token = "ATTA5b955fd7c66f0b91071fde50f4b783f40705018766c30a2f82cb1d895f00c50f005A7F21";
     public static Response createBoard(String boardName) {
@@ -21,21 +16,61 @@ public class ApiRequests {
                 .when()
                 .post("/1/boards/");
     }
-    public String createCard(String boardId) {
-        Response response = RestAssured.given()
+    public static Response createCard(String id) {
+        return given()
                 .contentType("application/json")
-                .queryParam("idList", boardId)
+                .queryParam("idList", id)
+                .queryParam("name","testCardName")
                 .queryParam("key", apiKey)
                 .queryParam("token", token)
                 .when()
-                .post("/1/cards/")
+                .post("/1/cards/");
+    }
+    public static Response getCardIdList(String id) {
+        return given()
+                .contentType("application/json")
+                .queryParam("key", apiKey)
+                .queryParam("token", token)
+                .when()
+                .get("/1/boards/{id}/lists", id)
                 .then()
                 .extract()
                 .response();
-        assertEquals(200, response.getStatusCode(), "createBoard Servisi Hata Aldı");
-        String jsonResponse = response.getBody().asString();
-        Gson gson = new Gson();
-        Map<String, Object> jsonMap = gson.fromJson(jsonResponse, Map.class);
-        return (String) jsonMap.get("id");
+    }
+
+    public static Response updateCard(String id) {
+        return given()
+                .contentType("application/json")
+                .queryParam("name","updateName")
+                .queryParam("desc","DESCRIPTION")
+                .queryParam("key", apiKey)
+                .queryParam("token", token)
+                .when()
+                .put("/1/cards/{id}", id)
+                .then()
+                .extract()
+                .response();
+    }
+    public static Response deleteCard(String id) {
+        return given()
+                .contentType("application/json")
+                .queryParam("key", apiKey)
+                .queryParam("token", token)
+                .when()
+                .delete("/1/cards/{id}", id)
+                .then()
+                .extract()
+                .response();
+    }
+    public static Response deleteBoard(String id) {
+        return given()
+                .contentType("application/json")
+                .queryParam("key", apiKey)
+                .queryParam("token", token)
+                .when()
+                .delete("/1/boards/{id}", id)
+                .then()
+                .extract()
+                .response();
     }
 }

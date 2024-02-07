@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="131fbd4f-b15d-4782-866f-1dce96d1223a" name="Changes" comment="" />
+    <list default="true" id="131fbd4f-b15d-4782-866f-1dce96d1223a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/base/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/base/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/api/Api.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/api/Api.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/baseactions/BaseActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/baseactions/BaseActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/TrelloApiTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/TrelloApiTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,12 +41,74 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.TrelloApiTests.createBoard.executor": "Run",
+    "JUnit.TrelloApiTests.trelloTest.executor": "Run",
+    "JUnit.trelloApiTests.createBoard.executor": "Run",
+    "JUnit.trelloApiTests.getUsersTest.executor": "Run",
     "Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="JUnit.TrelloApiTests.trelloTest">
+    <configuration name="TrelloApiTests.createBoard" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trelloApiTestAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.TrelloApiTests" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TrelloApiTests" />
+      <option name="METHOD_NAME" value="createBoard" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrelloApiTests.getUsersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trelloApiTestAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.TrelloApiTests" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TrelloApiTests" />
+      <option name="METHOD_NAME" value="getUsersTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrelloApiTests.trelloTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="trelloApiTestAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.TrelloApiTests" />
+      <option name="METHOD_NAME" value="trelloTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TrelloApiTests.trelloTest" />
+        <item itemvalue="JUnit.TrelloApiTests.createBoard" />
+        <item itemvalue="JUnit.TrelloApiTests.getUsersTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -43,5 +119,32 @@
       <updated>1707331103984</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/TrelloApiTests.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/api/Api.java</url>
+          <line>40</line>
+          <properties class="api.Api" method="updateCard">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="cardList" />
+        <watch expression="cardList.get(BaseActions.generateRandomNumber(0,cardList.size()-1))" />
+        <watch expression="Api.updateCard(cardList.get(BaseActions.generateRandomNumber(0,cardList.size()-1))).getBody().asString()" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
