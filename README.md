@@ -16,7 +16,7 @@
   - main
      - java
        - base
-        - BaseTest.java
+         - BaseTest.java
   - test
     - java
       - api
